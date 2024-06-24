@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ktp-course-info/static/css/main.adb13c27.css",
-    "main.js": "/ktp-course-info/static/js/main.14fcdb92.js",
+    "main.css": "/ktp-course-info/static/css/main.4a00ccbd.css",
+    "main.js": "/ktp-course-info/static/js/main.f9ceb6e7.js",
     "static/js/453.a50ea509.chunk.js": "/ktp-course-info/static/js/453.a50ea509.chunk.js",
     "static/media/logo.svg": "/ktp-course-info/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/ktp-course-info/index.html",
-    "main.adb13c27.css.map": "/ktp-course-info/static/css/main.adb13c27.css.map",
-    "main.14fcdb92.js.map": "/ktp-course-info/static/js/main.14fcdb92.js.map",
+    "main.4a00ccbd.css.map": "/ktp-course-info/static/css/main.4a00ccbd.css.map",
+    "main.f9ceb6e7.js.map": "/ktp-course-info/static/js/main.f9ceb6e7.js.map",
     "453.a50ea509.chunk.js.map": "/ktp-course-info/static/js/453.a50ea509.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.adb13c27.css",
-    "static/js/main.14fcdb92.js"
+    "static/css/main.4a00ccbd.css",
+    "static/js/main.f9ceb6e7.js"
   ]
 }
