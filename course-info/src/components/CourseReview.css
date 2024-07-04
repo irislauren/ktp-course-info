@@ -1,0 +1,28 @@
+.course-review {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+}
+
+.course-review p {
+    line-height: 0.5;
+}
+.course-name, .course-type, .course-prereqs, .course-comments {
+    text-align: left;
+    margin: 5px;
+}
+
+.course-name {
+    font-weight: bold;
+    background-color: rgb(182, 221, 251);
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.course-type, .course-prereqs {
+    font-style: italic;
+    color: rgb(10, 77, 129);
+    padding-left: 5px;
+}
