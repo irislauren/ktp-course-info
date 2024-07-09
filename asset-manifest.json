@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ktp-course-info/static/css/main.3229ed03.css",
-    "main.js": "/ktp-course-info/static/js/main.f51ca92b.js",
+    "main.css": "/ktp-course-info/static/css/main.f0d70121.css",
+    "main.js": "/ktp-course-info/static/js/main.49b4c206.js",
     "static/js/453.a50ea509.chunk.js": "/ktp-course-info/static/js/453.a50ea509.chunk.js",
     "index.html": "/ktp-course-info/index.html",
-    "main.3229ed03.css.map": "/ktp-course-info/static/css/main.3229ed03.css.map",
-    "main.f51ca92b.js.map": "/ktp-course-info/static/js/main.f51ca92b.js.map",
+    "main.f0d70121.css.map": "/ktp-course-info/static/css/main.f0d70121.css.map",
+    "main.49b4c206.js.map": "/ktp-course-info/static/js/main.49b4c206.js.map",
     "453.a50ea509.chunk.js.map": "/ktp-course-info/static/js/453.a50ea509.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3229ed03.css",
-    "static/js/main.f51ca92b.js"
+    "static/css/main.f0d70121.css",
+    "static/js/main.49b4c206.js"
   ]
 }
