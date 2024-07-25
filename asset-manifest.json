@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ktp-course-info/static/css/main.ddb8717b.css",
-    "main.js": "/ktp-course-info/static/js/main.38a0d9a3.js",
+    "main.css": "/ktp-course-info/static/css/main.4fa8b64d.css",
+    "main.js": "/ktp-course-info/static/js/main.0debfabb.js",
     "static/js/453.cbe6ccf0.chunk.js": "/ktp-course-info/static/js/453.cbe6ccf0.chunk.js",
     "static/media/roboto-latin-400-normal.woff2": "/ktp-course-info/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
     "static/media/roboto-cyrillic-ext-400-normal.woff2": "/ktp-course-info/static/media/roboto-cyrillic-ext-400-normal.804378952da8a10faae2.woff2",
@@ -18,12 +18,12 @@
     "static/media/roboto-greek-ext-400-normal.woff2": "/ktp-course-info/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "static/media/roboto-greek-ext-400-normal.woff": "/ktp-course-info/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "index.html": "/ktp-course-info/index.html",
-    "main.ddb8717b.css.map": "/ktp-course-info/static/css/main.ddb8717b.css.map",
-    "main.38a0d9a3.js.map": "/ktp-course-info/static/js/main.38a0d9a3.js.map",
+    "main.4fa8b64d.css.map": "/ktp-course-info/static/css/main.4fa8b64d.css.map",
+    "main.0debfabb.js.map": "/ktp-course-info/static/js/main.0debfabb.js.map",
     "453.cbe6ccf0.chunk.js.map": "/ktp-course-info/static/js/453.cbe6ccf0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddb8717b.css",
-    "static/js/main.38a0d9a3.js"
+    "static/css/main.4fa8b64d.css",
+    "static/js/main.0debfabb.js"
   ]
 }
