@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react'
+import '@fontsource/roboto/400.css'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/Home'
 import CoursesPage from './pages/Courses'

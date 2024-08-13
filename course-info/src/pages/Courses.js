@@ -1,84 +1,71 @@
-import React from 'react'
-import { useState } from 'react';
-import CourseReview from '../components/CourseReview'
-import './Courses.css'
+import React, { useState, useEffect } from "react";
+import CourseReview from "../components/CourseReview";
+import "./Courses.css";
+import DeptButton from "../components/Departments";
+import QuarterButton from "../components/Quarter";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import reviews from "../reviews.json";
+import FilterTag from "../components/FilterTag";
+
 
 const CoursesPage = () => {
-    const [activeFilter, setActiveFilter] = useState('All');
-    const filters = ['Department', 'Quarter'];
+  const [selectedDept, setSelectedDept] = React.useState(null);
+  const [selectedQuarter, setSelectedQuarter] = React.useState(null);
 
-    const handleFilterClick = (filter) => {
-        setActiveFilter(filter);
-    };
-    const [showUpcoming, setShowUpcoming] = React.useState(false);
-    const [showDept, setShowDept] = React.useState(false);  
-    const reviews = [
-        {
-            courseName: 'CMSC 14100: Introduction to Computer Science (Rogers)',
-            courseInstructor: 'Rogers',
-            courseType: 'Major Requirement',
-            coursePrereqs: 'Prerequisites: None',
-            comments: [
-                '(Laura) Rogers is kinda scary but she’s very organized and overall good prof',
-                '(Mahum) Rogers is hands down one of the best lecturers I have ever had',
-            ],
-            upcoming: true,
-        },
-        {
-            courseName: 'CMSC 14200: Introduction to Computer Science (Shaw)',
-            courseInstructor: 'Shaw',
-            courseType: 'Major Requirement',
-            coursePrereqs: 'Prerequisites: None',
-            comments: [
-                '(Ellen) sometimes I love him, sometimes im meh ab him. sometimes he\'ll add unnecessary comments when answering questions, like dumb questions do exist lol. but amazing lecturer + super well rounded individual.',
-                '(Pratham) love Shaw this guy is the goat. Genuinely passionate about helping you learn and a very nice guy',
-                '(Joshua) Take with Shaw. I had him for 151 and he was very good',
-            ],
-            upcoming: false,
-        }
-    ];
-            
-    let filteredReviews = reviews;
-    if (showUpcoming) {
-        filteredReviews = reviews.filter(review => review.upcoming);
-    
-    } 
-    if (showDept) {
-        filteredReviews = filteredReviews.filter(review => review.courseName.includes("CMSC"));
-    }
+  const handleDeptSelect = (dept) => {
+    setSelectedDept(dept);
+  };
 
-    return (
-        <div>
-            <h1>Welcome to the courses page</h1>
-            <label>
-                <input type="checkbox" checked={showUpcoming} onChange={() => setShowUpcoming(!showUpcoming)} />
-                Showing only upcoming courses
-            </label>
-            <label>
-                <input type="checkbox" checked={showDept} onChange={() => setShowDept(!showDept)} />
-                Showing only CMSC courses
-            </label>
-            <div className = "filter-box">
-                <span className="filter-label" disabled>Filters:</span> {/* This button acts as a label */}
-                {filters.map((filter, index) => (
-                    <button
-                        key={index}
-                        className={`filter-button ${activeFilter === filter ? 'active' : ''}`}
-                        onClick={() => handleFilterClick(filter)}
-                    >
-                        {filter}
-                    </button>
-                ))}
-            </div>
-            <div className="courses">
-                {/* <div className="sidebox"></div> */}
-                {filteredReviews.map((review, index) => (
-                    <CourseReview key={index} review={review} />
-                ))}
-                {/* <div className="sidebox"></div> */}
-            </div>
-        </div>
-    );
-};
+  const handleQuarterSelect = (quarter) => {
+    setSelectedQuarter(quarter);
+  };
   
+  const handleRemoveDept = () => {
+    setSelectedDept(null);
+  };
+
+  const handleRemoveQuarter = () => {
+    setSelectedQuarter(null);
+  };
+
+  let filteredReviews = reviews;
+
+  if (selectedDept) {
+    filteredReviews = filteredReviews.filter(
+      (review) => review.dept === selectedDept
+    );
+  }
+  if (selectedQuarter) {
+    filteredReviews = filteredReviews.filter((review) =>
+      review.quarters.includes(selectedQuarter)
+    );
+  }
+
+  const sortedReviews = [...reviews].sort((a, b) => {
+    if (a.courseName < b.courseName) return -1;
+    if (a.courseName > b.courseName) return 1;
+    return 0;
+  });
+
+  return (
+    <div>
+      <h1>Welcome to the courses page</h1>
+      <div className="filter-bar">
+        <FilterListIcon />
+        <DeptButton onDeptSelect={handleDeptSelect} />
+        <QuarterButton onQuarterSelect={handleQuarterSelect}/>
+      </div>
+      <div className="selected-filters">
+        {selectedDept && <FilterTag label={selectedDept} onRemove={handleRemoveDept} />}
+        {selectedQuarter && <FilterTag label={selectedQuarter} onRemove={handleRemoveQuarter} />}
+      </div>
+      <div className="courses">
+        {sortedReviews.map((review, index) => (
+          <CourseReview key={index} review={review} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default CoursesPage;

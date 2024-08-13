@@ -2,16 +2,21 @@
     margin: 5px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 800px;
+    width: 90%;
+    max-width: none;
 }
 
-.course-review p {
-    line-height: 0.5;
+.course-review .card-content {
+    flex-grow: 1; 
 }
-.course-name, .course-type, .course-prereqs, .course-comments {
+
+.course-name,
+.course-type,
+.course-prereqs,
+.course-comments {
     text-align: left;
     margin: 5px;
+    color: gray;
 }
 
 .course-name {
@@ -21,8 +26,19 @@
     cursor: pointer;
 }
 
-.course-type, .course-prereqs {
-    font-style: italic;
-    color: rgb(10, 77, 129);
-    padding-left: 5px;
+.course-type,
+.course-prereqs {
+    font-weight: bold;
+}
+
+.expand-more-icon {
+    color: gray;
+}
+
+.course-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.5;
+    color: black;
 }
